@@ -1,0 +1,142 @@
+@font-face {
+    font-family: "Paper Mario";
+    src: url("../fonts/SuperMarioScript2Demo-Regular.ttf");
+}
+
+html, body {
+    background-color: #a35700;
+    font-family: "Paper Mario";
+    user-select: none;
+}
+
+div.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.flex-column {
+    flex-direction: column;
+}
+
+table, tr, td {
+    border: none;
+
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+#hundo-tracker td {
+    padding-left: 1em;
+}
+
+td {
+    text-align: center;
+    min-width: 66px;
+    min-height: 66px;
+    vertical-align: middle;
+}
+
+p, h1, h2 {
+    margin: 0 0 0 0;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: white;
+
+    -webkit-text-stroke: 1px black;
+}
+
+h1 {
+    font-size: 2.75em;
+    padding-left: 0.25em;
+}
+
+h1.small-header {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.75em;
+    padding-right: 0.25em;
+}
+
+.main-tracker {
+    background-color: rgba(0,0,0,0.25);
+    width: 36em;
+    height: 23em;
+    margin: 5px 5px 5px 5px;
+    border-radius: 10px;
+}
+
+.info-block {
+    width: 34em;
+    margin: 10px 10px 10px 10px;
+    color: white;
+}
+
+.chapter-group {
+    border-style: solid;
+    border-color: black;
+    border-width: 1;
+}
+
+img {
+    cursor: pointer;
+}
+
+footer {
+    color: white;
+    font-size: 0.8em;
+}
+
+a {
+    text-decoration: none;
+    color: lightblue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #666c;
+
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -105px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #666c transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
