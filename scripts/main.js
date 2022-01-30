@@ -2,7 +2,7 @@ const maxKeyCounts = {
     1: 80, // badges
     2: 50, // recipes
     3: 64, // quizmo
-    4: 160, // star pieces
+    4: 96, // star pieces
 };
 
 var currentKeyCounts = {
