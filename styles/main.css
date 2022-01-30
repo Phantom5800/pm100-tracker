@@ -211,7 +211,7 @@ a:hover {
 }
 
 #options-menu {
-    background-color: darkblue;
+    background-color: darkred;
     color: white;
     margin: 5px 5px 5px 5px;
     padding: 5px 5px 5px 5px;
@@ -275,7 +275,7 @@ input.checkbox-slider {
 }
 
 input:checked + .checkbox-groove {
-    background-color: #5fcf80;
+    background-color: #ff702e;
 }
 
 input:checked + .checkbox-groove:after {
