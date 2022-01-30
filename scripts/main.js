@@ -130,10 +130,21 @@ $(document).ready(function(){
         localStorage.setItem("vertical-tracker", isChecked);
     });
 
+    $("#background-color").on("input", function() {
+        var color = $(this).val();
+        $("body, html").css("background-color", color);
+        localStorage.setItem("background-color", color);
+    });
+
+    // local storage settings
     var vertical_tracker = localStorageGetWithDefault("vertical-tracker", false) == "true";
     if (vertical_tracker) {
         $("#vertical-tracker").click();
     } else {
         $(".horizontal-tracker").toggle();
     }
+
+    var bg_color = localStorageGetWithDefault("background-color", "#a35700");
+    $("body, html").css("background-color", bg_color);
+    $("#background-color").val(bg_color);
 });

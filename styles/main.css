@@ -117,7 +117,6 @@ img {
 }
 
 img.unselected {
-    mix-blend-mode: multiply;
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
 }
@@ -282,4 +281,8 @@ input:checked + .checkbox-groove {
 
 input:checked + .checkbox-groove:after {
     transform: translateX(30px);
+}
+
+input[type="color"] {
+    width: 100%;
 }
