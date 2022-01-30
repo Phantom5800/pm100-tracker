@@ -18,6 +18,13 @@
         </script>
     </head>
     <body>
+        <header>
+            <div id="options-menu-toggle" class="hamburger">
+                <div class="hamburger-1"></div>
+                <div class="hamburger-2"></div>
+                <div class="hamburger-3"></div>
+            </div>
+        </header>
         <div class="flex-row">
             <!--
                 Main tracker for chapter progress
@@ -36,38 +43,133 @@
                 <table id="hundo-tracker">
                     <tr>
                         <td>
-                            <img data-chapter-key="3" id="Quizmo" class="unselected optional-item" src="images/icons/ChuckQuizmo_PM.png">
-                            <p id="chapter-3-key-count">0/64</p>
+                            <img data-chapter-key="3" id="Quizmo" class="optional-item" src="images/icons/ChuckQuizmo_PM.png">
+                            <p class="chapter-3-key-count">0/64</p>
                         </td>
                     </tr>
                     <tr>                        
                         <td colspan="2">
-                            <img data-chapter-key="4" id="Star Pieces" class="unselected optional-item" src="images/icons/Star_Piece.png">
-                            <p id="chapter-4-key-count">0/160</p>
+                            <img data-chapter-key="4" id="Star Pieces" class="optional-item" src="images/icons/Star_Piece.png">
+                            <p class="chapter-4-key-count">0/160</p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <img data-chapter-key="2" id="Recipes" class="unselected optional-item" src="images/icons/Cake.gif">
-                            <p id="chapter-2-key-count">0/50</p>
+                            <img data-chapter-key="2" id="Recipes" class="optional-item" src="images/icons/Cake.gif">
+                            <p class="chapter-2-key-count">0/50</p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <img data-chapter-key="1" id="Badges" class="unselected optional-item" src="images/icons/Speedy_Spin_Badge.png">
-                            <p id="chapter-1-key-count">0/80</p>
+                            <img data-chapter-key="1" id="Badges" class="optional-item" src="images/icons/Speedy_Spin_Badge.png">
+                            <p class="chapter-1-key-count">0/80</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="horizontal-tracker">
+                <table width="100%">
+                    <tr style="height: 4em;">
+                        <td style="text-align: left; width: 60%;">
+                            <h1>100% Progress</h1>
+                        </td>
+                        <td style="text-align: right;">
+                            <h2></h2>
+                        </td>
+                    </tr>
+                </table>
+                <table id="hundo-tracker">
+                    <tr>
+                        <td>
+                            <img data-chapter-key="3" id="Quizmo" class="optional-item" src="images/icons/ChuckQuizmo_PM.png">
+                            <p class="chapter-3-key-count">0/64</p>
+                        </td>
+                        <td colspan="2">
+                            <img data-chapter-key="4" id="Star Pieces" class="optional-item" src="images/icons/Star_Piece.png">
+                            <p class="chapter-4-key-count">0/160</p>
+                        </td>
+                        <td>
+                            <img data-chapter-key="2" id="Recipes" class="optional-item" src="images/icons/Cake.gif">
+                            <p class="chapter-2-key-count">0/50</p>
+                        </td>
+                        <td>
+                            <img data-chapter-key="1" id="Badges" class="optional-item" src="images/icons/Speedy_Spin_Badge.png">
+                            <p class="chapter-1-key-count">0/80</p>
                         </td>
                     </tr>
                 </table>
             </div>
 
             <div class="flex-column">
+                <div class="quizmo-answers">
+                    <table width="100%">
+                        <tr style="height: 2em;">
+                            <td style="text-align: left; width: 60%;">
+                                <h1>Quizmo Answer (1):</h1>
+                            </td>
+                            <td style="text-align: right;">
+                                <h2>3</h2>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="rowf-badges">
+                    <table width="100%">
+                        <tr style="height: 2em;">
+                            <td style="text-align: left; width: 60%;">
+                                <h1>Rowf Shop</h1>
+                            </td>
+                            <td style="text-align: right;">
+                                <h2>1650</h2>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td><img data-badge-cost="100" id="All or Nothing" class="unselected badge" src="images/badges/PM_All_or_Nothing_Badge.png"></td>
+                            <td><img data-badge-cost="75" id="D-Down Pound" class="unselected badge" src="images/badges/D-Down_Pound_Badge.png"></td>
+                            <td><img data-badge-cost="150" id="Damage Dodge" class="unselected badge" src="images/badges/Damage_Dodge_Badge.png"></td>
+                            <td><img data-badge-cost="100" id="Dodge Master" class="unselected badge" src="images/badges/Dodge_Master_Badge.png"></td>
+                            <td><img data-badge-cost="100" id="Double Dip" class="unselected badge" src="images/badges/Double_Dip_Badge.png"></td>
+                            <td><img data-badge-cost="100" id="First Attack" class="unselected badge" src="images/badges/First_Attack_Badge.png"></td>
+                            <td><img data-badge-cost="150" id="FP Plus" class="unselected badge" src="images/badges/FP_Plus_Badge.png"></td>
+                            <td><img data-badge-cost="100" id="Group Focus" class="unselected badge" src="images/badges/Group_Focus_Badge.png"></td>
+                        </tr>
+                        <tr>
+                            <td><img data-badge-cost="150" id="HP Plus" class="unselected badge" src="images/badges/HP_Plus_Badge.png"></td>
+                            <td><img data-badge-cost="50" id="Jump Charge" class="unselected badge" src="images/badges/Jump_Charge_Badge.png"></td>
+                            <td><img data-badge-cost="200" id="Mega Quake" class="unselected badge" src="images/badges/Mega_Quake_Badge.png"></td>
+                            <td><img data-badge-cost="75" id="Multibounce" class="unselected badge" src="images/badges/Multibounce_Badge.png"></td>
+                            <td><img data-badge-cost="100" id="S. Smash Charge" class="unselected badge" src="images/badges/S-Smash_Charge_Badge.png"></td>
+                            <td><img data-badge-cost="75" id="Sleep Stomp" class="unselected badge" src="images/badges/Sleep_Stomp_Badge.png"></td>
+                            <td><img data-badge-cost="50" id="Speedy Spin" class="unselected badge" src="images/badges/Speedy_Spin_Badge.png"></td>
+                            <td><img data-badge-cost="75" id="Spin Smash" class="unselected badge" src="images/badges/Spin_Smash_Badge.png"></td>
+                        </tr>
+                    </table>
+                </div>
+
                 <div class="info-block">
                     <ul>
                         <li>For suggestions and feature requests, please make issues on Github (link in the footer)!</li>
                     </ul>
                 </div>
             </div>
+        </div>
+
+        <div id="options-menu">
+            <table width="100%">
+                <tr>
+                    <td class="option-name">Horizontal Tracker</td>
+                    <td class="option">
+                        <div class="checkbox-slider">
+                            <input class="checkbox-slider" id="vertical-tracker" type="checkbox">
+                            <div class="checkbox-groove"></div>
+                            <label class="checkbox-slider" for="vertical-tracker"></label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
 
         <footer style="padding-top: 1em; text-align: center;">

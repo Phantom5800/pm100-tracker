@@ -68,6 +68,38 @@ h2 {
     border-radius: 10px;
 }
 
+.horizontal-tracker {
+    background-color: rgba(0,0,0,0.25);
+    width: 36em;
+    height: 9em;
+    margin: 5px 5px 5px 5px;
+    border-radius: 10px;
+}
+
+.quizmo-answers {
+    background-color: rgba(0,0,0,0.25);
+    width: 36em;
+    height: 2.5em;
+    margin: 5px 5px 5px 5px;
+    border-radius: 10px;
+}
+
+.quizmo-answers h1 {
+    font-size: 1.75em;
+}
+
+.rowf-badges {
+    background-color: rgba(0,0,0,0.25);
+    width: 36em;
+    height: 9em;
+    margin: 5px 5px 5px 5px;
+    border-radius: 10px;
+}
+
+.rowf-badges h1 {
+    font-size: 1.75em;
+}
+
 .info-block {
     width: 34em;
     margin: 10px 10px 10px 10px;
@@ -82,6 +114,10 @@ h2 {
 
 img {
     cursor: pointer;
+}
+
+img.unselected {
+    mix-blend-mode: multiply;
 }
 
 footer {
@@ -139,4 +175,104 @@ a:hover {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+/* Options Menu */
+.hamburger {
+    cursor: pointer;
+    width: 40px;
+}
+
+.hamburger-1, .hamburger-2, .hamburger-3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.options-open .hamburger-1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.options-open .hamburger-2 {
+    opacity: 0;
+}
+
+.options-open .hamburger-3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#options-menu {
+    background-color: darkblue;
+    color: white;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+    font-size: 1.5em;
+    position: absolute;
+    left: -600px;
+    top: 52px;
+    width: 500px;
+    transition: 0.4s;
+}
+
+#options-menu.options-open {
+    -webkit-transform: translate(608px);
+    transform: translate(608px);
+}
+
+td.option-name {
+    text-align: left;
+    padding-left: 10px;
+}
+
+td.option {
+    width: 60px;
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.checkbox-groove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ababab;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.checkbox-groove:after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 1px;
+    left: 1px;
+    transition: all 0.3s ease;
+}
+
+.checkbox-slider {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 30px;
+}
+
+input.checkbox-slider {
+    display: none;
+}
+
+input:checked + .checkbox-groove {
+    background-color: #5fcf80;
+}
+
+input:checked + .checkbox-groove:after {
+    transform: translateX(30px);
 }
