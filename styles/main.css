@@ -117,8 +117,8 @@ img {
 }
 
 img.unselected {
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1);
+    -webkit-filter: grayscale(1) brightness(50%);
+    filter: grayscale(1) brightness(50%);
 }
 
 header {
