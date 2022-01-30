@@ -120,6 +120,11 @@ img.unselected {
     mix-blend-mode: multiply;
 }
 
+header {
+    padding-top: 5px;
+    margin: 5px 5px 5px 5px;
+}
+
 footer {
     color: white;
     font-size: 0.8em;
