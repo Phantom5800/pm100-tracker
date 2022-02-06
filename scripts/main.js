@@ -136,6 +136,12 @@ $(document).ready(function(){
         localStorage.setItem("background-color", color);
     });
 
+    $("#section-color").on("input", function() {
+        var color = $(this).val();
+        $(".section").css("background-color", color);
+        localStorage.setItem("section-color", color);
+    });
+
     // local storage settings
     var vertical_tracker = localStorageGetWithDefault("vertical-tracker", false) == "true";
     if (vertical_tracker) {
@@ -147,4 +153,8 @@ $(document).ready(function(){
     var bg_color = localStorageGetWithDefault("background-color", "#a35700");
     $("body, html").css("background-color", bg_color);
     $("#background-color").val(bg_color);
+
+    var section_color = localStorageGetWithDefault("section-color", "#7b4103");
+    $(".section").css("background-color", section_color);
+    $("#section-color").val(section_color);
 });
