@@ -118,7 +118,7 @@ $(document).ready(function(){
                 $(".quizmo-answers h2").text("");
             } else {
                 $(".quizmo-answers h1").text(`Quizmo Answer (${nextQuizmo}):`);
-                $(".quizmo-answers h2").text(quizmoAnswers[currentKeyCounts[c] - 1]);
+                $(".quizmo-answers h2").text(quizmoAnswers[currentKeyCounts[c]]);
             }
         }
     });
@@ -132,7 +132,7 @@ $(document).ready(function(){
 
         if ($(this).attr("id") === "Quizmo") {
             $(".quizmo-answers h1").text(`Quizmo Answer (${currentKeyCounts[c] + 1}):`);
-            $(".quizmo-answers h2").text(quizmoAnswers[currentKeyCounts[c] - 1]);
+            $(".quizmo-answers h2").text(quizmoAnswers[currentKeyCounts[c]]);
         }
         return false;
     });
