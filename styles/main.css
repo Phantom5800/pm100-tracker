@@ -62,27 +62,23 @@ h2 {
 
 .section {
     background-color: rgba(0,0,0,0.25);
+    margin: 5px 5px 5px 5px;
+    border-radius: 10px;
 }
 
 .main-tracker {
     width: 36em;
     height: 23em;
-    margin: 5px 5px 5px 5px;
-    border-radius: 10px;
 }
 
 .horizontal-tracker {
     width: 36em;
     height: 9em;
-    margin: 5px 5px 5px 5px;
-    border-radius: 10px;
 }
 
 .quizmo-answers {
     width: 36em;
     height: 2.5em;
-    margin: 5px 5px 5px 5px;
-    border-radius: 10px;
 }
 
 .quizmo-answers h1 {
@@ -92,8 +88,6 @@ h2 {
 .rowf-badges {
     width: 36em;
     height: 9em;
-    margin: 5px 5px 5px 5px;
-    border-radius: 10px;
 }
 
 .rowf-badges h1 {
@@ -191,10 +185,13 @@ a:hover {
 
 .hamburger-1, .hamburger-2, .hamburger-3 {
     width: 35px;
-    height: 5px;
+    height: 3px;
     background-color: black;
     margin: 6px 0;
     transition: 0.4s;
+    border-color: gainsboro;
+    border-width: 1px;
+    border-style: solid;
 }
 
 .options-open .hamburger-1 {

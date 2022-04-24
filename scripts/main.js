@@ -3,6 +3,7 @@ const maxKeyCounts = {
     2: 50, // recipes
     3: 64, // quizmo
     4: 96, // star pieces
+    5: 10 // rip cheato
 };
 
 var currentKeyCounts = {
@@ -10,6 +11,7 @@ var currentKeyCounts = {
     2: 0,
     3: 0,
     4: 0,
+    5: 0
 };
 
 var rowf_coins = 1650;
@@ -110,6 +112,10 @@ $(document).ready(function(){
             $(`.chapter-${c}-key-count`).text(`${currentKeyCounts[c]}/${maxKeyCounts[c]}`);
         }
 
+        if (c === 5) {
+            $(".rip-cheato h2").text((10 - currentKeyCounts[c]) * 64);
+        }
+
         if ($(this).attr("id") === "Quizmo") {
             var nextQuizmo = currentKeyCounts[c] + 1;
 
@@ -128,6 +134,10 @@ $(document).ready(function(){
         if (currentKeyCounts[c] > 0) {
             --currentKeyCounts[c];
             $(`.chapter-${c}-key-count`).text(`${currentKeyCounts[c]}/${maxKeyCounts[c]}`);
+        }
+
+        if (c === 5) {
+            $(".rip-cheato h2").text((10 - currentKeyCounts[c]) * 64);
         }
 
         if ($(this).attr("id") === "Quizmo") {
